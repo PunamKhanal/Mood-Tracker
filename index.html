@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mood & Activity Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="app-wrapper">
+    <header>
+      <h1>Mood & Activity Tracker</h1>
+      <p class="subtitle">Mindful Tracking</p>
+    </header>
+
+    <main class="container">
+      <section id="entry-form" class="glass-card">
+        <h2>How are you today?</h2>
+        <div id="moodPicker" class="mood-picker" aria-label="Choose a mood">
+          <button type="button" data-mood="happy" title="Happy">😊</button>
+          <button type="button" data-mood="good" title="Good">🙂</button>
+          <button type="button" data-mood="neutral" title="Neutral">😐</button>
+          <button type="button" data-mood="sad" title="Sad">😔</button>
+          <button type="button" data-mood="stressed" title="Stressed">😓</button>
+        </div>
+
+        <label for="activities">What did you do today?</label>
+        <textarea id="activities" placeholder="Write 1-3 activities here..." rows="3"></textarea>
+        <button id="save-btn" type="button">Save Entry</button>
+      </section>
+
+      <section id="stats" class="stats-grid"></section>
+
+      <section id="history">
+        <div class="history-header">
+          <h2>History</h2>
+          <div id="filter">
+            <button type="button" data-filter="" class="active">All</button>
+            <button type="button" data-filter="happy">😊</button>
+            <button type="button" data-filter="good">🙂</button>
+            <button type="button" data-filter="neutral">😐</button>
+            <button type="button" data-filter="sad">😔</button>
+            <button type="button" data-filter="stressed">😓</button>
+          </div>
+        </div>
+        <div id="entries-list"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
